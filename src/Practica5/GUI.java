@@ -23,8 +23,7 @@ public class GUI extends JFrame{
         //setResizable(false);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         componentes();
-        setVisible(true);
-        
+        setVisible(true);  
     }
     
     public void componentes(){
