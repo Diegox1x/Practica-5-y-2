@@ -22,16 +22,16 @@ public class GUI extends JFrame {
     }
     
     public void componentes() {
-        // 1. Barra principal
+        // Barra principal
         barra = new JMenuBar();
         
-        // 2. Menús principales de la barra
+        // Menús principales de la barra
         archivo = new JMenu("Archivo");
         editar = new JMenu("Editar");
         reporte = new JMenu("Reporte");
         salir = new JMenu("Salir");
         
-        // 3. Opciones internas (Items)
+        //  internas (Items)
         nuevo = new JMenuItem("Nuevo");
         consultar = new JMenuItem("Consultar");
         eliminar = new JMenuItem("Eliminar");
@@ -41,7 +41,7 @@ public class GUI extends JFrame {
         archivoPdf = new JMenuItem("Archivo PDF");
         archivoTxt = new JMenuItem("Archivo txt");
         
-        // 4. Agregar items a sus menús correspondientes
+        //items correspondientes
         archivo.add(nuevo);
         archivo.add(consultar);
         archivo.add(eliminar);
@@ -51,16 +51,16 @@ public class GUI extends JFrame {
         reporte.add(archivoPdf);
         reporte.add(archivoTxt);
         
-        // 5. Agregar los menús a la barra principal
+        //  la barra principal
         barra.add(archivo);
         barra.add(editar);
         barra.add(reporte);
         barra.add(salir);
         
-        // 6. Asignar la barra a la ventana
+        //barra a la ventana
         setJMenuBar(barra);
         
-        // 7. Etiqueta central de Fondo
+        // Fondo
         fondo = new JLabel("Fondo", SwingConstants.CENTER);
         fondo.setBounds(0, 0, 365, 220);
         add(fondo);
