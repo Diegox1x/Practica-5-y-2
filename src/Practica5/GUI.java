@@ -1,5 +1,7 @@
 
 package Practica5;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.*;
 
 
@@ -45,7 +47,33 @@ public class GUI extends JFrame{
         nuevo.setBounds(100,200,100,30);
         
         acceder = new JButton("Acceder");
-        acceder.setBounds(210,200,100,30);         
+        acceder.setBounds(210,200,100,30);
+        acceder.addActionListener(new ActionListener() {
+        
+        @Override
+        public void actionPerformed(ActionEvent ae) {
+        
+            String usuario2 = "Maritza", contrasenia2 ="12345", usuario, contrasenia;
+            usuario = tusuario.getText();
+            contrasenia = pcontrasenia.getText();
+            
+            if(usuario.equals(usuario2)) {
+             
+                Ventana ven = new Ventana();
+                ven.setVisible(true);
+                setVisible(false);
+            } else {
+                JOptionPane.showMessageDialog(null,"Usuario incorrecto");
+            }
+            
+            //Evaluar usuario y contraseña
+            /*if (usuario.equalsIgnoreCase(anotherString:Usuario2) && contrasenia.equalsIgnoreCase)
+            
+            Ventana ven = new Ventana ();
+            ven.setVisible(b:true);
+            setVisible(b:false);            
+        */}
+    });
         
         add(contrasenia);
         add(usuario);

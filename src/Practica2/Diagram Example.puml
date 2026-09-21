@@ -1,0 +1,37 @@
+@startuml
+' Renderiza internamente con resolución altísima
+skinparam dpi 600
+' Pero luego reduce la escala visual a la mitad (0.5)
+scale 0.5
+skinparam textAntialiasing true
+skinparam DefaultFontName Arial
+
+' Tu código UML...
+
+' Tu código UML va aquí abajo...
+abstract class AbstractList
+abstract AbstractCollection
+interface List
+interface Collection
+
+List <|-- AbstractList
+Collection <|-- AbstractCollection
+
+Collection <|- List
+AbstractCollection <|- AbstractList
+AbstractList <|-- ArrayList
+
+class ArrayList {
+  Object[] elementData
+  size()
+}
+
+enum TimeUnit {
+  DAYS
+  HOURS
+  MINUTES
+}
+
+annotation SuppressWarnings
+
+@enduml
